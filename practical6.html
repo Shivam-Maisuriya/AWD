@@ -1,0 +1,27 @@
+<!-- 
+Practical6 : Take input from user through prompt box and store it in an array. Print the fibonacci series till the indexed number in the array.
+Name: Alok Swain
+Enrollment No: 202203103510229
+Batch:B.Tech CSE 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical-6</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+</body>
+<script>
+    let range = prompt("Enter a range for fibonacci series: ");
+
+    let fibonacci = [0, 1];
+    while (fibonacci.length <= (range - 1)) {
+    // let number = fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2];
+    // .at() is made negative indexing possible in js  
+    let number = fibonacci.at(-1) + fibonacci.at(-2);
+    fibonacci.push(number);
+    }
+    document.getElementById("demo").innerHTML ="fibronacci series : "+ fibonacci.join(" ");
+</script>
+</html>
